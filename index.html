@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор Мемов</title>
+  <script src="main.js" defer></script> 
+  <link rel="stylesheet" crossorigin href="/assets/index-B0zu8K3a.css">
+</head>
+<body>
+  <div class="container">
+    <a href="#" class="home-button">🏠 На главную</a>
+    <h1>🎭 Генератор Мемов</h1>
+    
+    <div class="page" id="main-page">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Поиск мемов...">
+        <button id="search-button">Поиск</button>
+      </div>
+      
+      <div id="memes-grid"></div>
+      <div id="loading" class="status-message">Загрузка мемов...</div>
+      <div id="no-results" class="status-message">Изображения не найдены</div>
+      <div id="timeout-message" class="status-message">Превышено время ожидания (5 сек)</div>
+    </div>
+    
+    <div class="page" id="generator-page" style="display:none">
+      <div class="generator-content">
+        <div class="meme-preview">
+          <img id="selected-meme-image" src="" alt="Выбранный мем">
+          <h3 id="selected-meme-name"></h3>
+        </div>
+        
+        <div class="text-inputs" id="text-inputs-container">
+        </div>
+        
+        <div class="generator-controls">
+          <select id="font-select">
+            <option value="arial">Arial</option>
+            <option value="impact" selected>Impact</option>
+            <option value="times">Times New Roman</option>
+            <option value="comic">Comic Sans</option>
+          </select>
+          <button id="generate-button">Создать мем</button>
+          <div id="generate-error" class="error-message"></div>
+        </div>
+        
+        <div class="result-section" id="result-section">
+          <img id="generated-meme-image" src="" alt="Ваш мем" style="display:none;">
+          <button id="download-button" style="display:none;">Скачать мем</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/src/main.js"></script>
+</body>
+</html>
